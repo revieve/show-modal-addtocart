@@ -13,4 +13,4 @@ onAddToCart() {
       modal.classList.remove('show');
     });
   },
-```# show-modal-addtocart
+```
