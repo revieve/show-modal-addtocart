@@ -4,8 +4,6 @@
 
 body {
   background-color: #f2f2f2;
-  position: relative;
-  height: 100vh;
 }
 
 .closeButton {
@@ -20,7 +18,7 @@ body {
 }
 
 .closeButton:before, .closeButton:after {
-  background-color: white;
+  background-color: black;
   border-radius: 30px;
   content: "";
   height: 6px;
@@ -39,27 +37,35 @@ body {
 }
 
 .modal {
-  background-color: white;
-  border-radius: 9px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-  height: 500px;
-  max-width: 450px;
-  position: absolute;
-  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  transform: translateY(30px);
-  z-index: 10000;
   opacity: 0;
   visibility: hidden;
+  z-index: 10000;
   transition: all .3s ease-in-out;
-  overflow: hidden;
+  transform: translateY(30px);
+}
+
+.modalview {
+  background-color: white;
+  border-radius: 9px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: grid;
+  height: 500px;
+  max-width: 450px;
+  place-items: center;
+  width: 100%;
 }
 
 .modal img {
-  object-fit: cover;
+  max-width: 350px;
 }
 
 .show {

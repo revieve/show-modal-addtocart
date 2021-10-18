@@ -9,8 +9,12 @@ const config = {
   onAddToCart() {
     const closeButton = document.querySelector('.closeButton');
     const modal = document.querySelector('.modal');
+    const modalview = document.querySelector('.modalview');
     modal.classList.add('show');
     closeButton.addEventListener('click', () => {
+      modal.classList.remove('show');
+    });
+    modal.addEventListener('click', () => {
       modal.classList.remove('show');
     });
   },
